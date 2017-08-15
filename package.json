@@ -1,0 +1,21 @@
+{
+  "name": "vicoders-modules",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "watch": "webpack --watch --config webpack.config.js",
+    "production": "webpack -p --config webpack.config.js"
+  },
+  "author": "Vicoders team",
+  "license": "ISC",
+  "dependencies": {
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.2.1"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "^0.1.16",
+    "webpack": "^3.5.4"
+  }
+}
