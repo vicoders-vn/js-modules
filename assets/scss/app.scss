@@ -1,4 +1,2 @@
-body {
-	background-color: #ccc;
-	background-image: url('../images/bg.jpg');
-}
+@import './services/notify';
+@import './services/preloader';

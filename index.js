@@ -1,8 +1,9 @@
-import 'jquery';
-import './assets/scss/app.scss';
-import './assets/fonts/myfont.ttf';
-import './assets/images/monkey.jpg';
+import notify from './src/services/notify/notify.js';
+import preloader from './src/services/preloader/preloader.js';
 
-$(document).ready(function(){
-	$('body').append('<h2>Hello Webpack!</h2>');
-});
+var VC = {
+	notify: notify,
+	preloader: preloader
+}
+
+export default VC;

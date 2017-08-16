@@ -8,7 +8,10 @@ var extractPlugin = new ExtractTextPlugin({
 });
 
 module.exports = {
-	entry: './index.js',
+	entry: './non_use_webpack.js',
+	entry: {
+		app: './assets/scss/app.scss'
+	},
 	output: {
 		path: path.resolve(__dirname, 'dist'),
 		filename: 'app.js',
