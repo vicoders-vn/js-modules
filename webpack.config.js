@@ -8,9 +8,11 @@ var extractPlugin = new ExtractTextPlugin({
 });
 
 module.exports = {
-	entry: './non_use_webpack.js',
 	entry: {
-		app: './assets/scss/app.scss'
+		app: [
+			'./assets/scss/app.scss',
+			'./non_use_webpack.js'
+		]
 	},
 	output: {
 		path: path.resolve(__dirname, 'dist'),
@@ -18,17 +20,14 @@ module.exports = {
 		publicPath: '/dist'
 	},
 	module: {
-		rules: [
-			{
+		rules: [{
 				test: /\.js$/,
-				use: [
-					{
-						loader: 'babel-loader',
-						options: {
-							presets: ['es2015']
-						} 
+				use: [{
+					loader: 'babel-loader',
+					options: {
+						presets: ['es2015']
 					}
-				]
+				}]
 			},
 			{
 				test: /\.css$/,
@@ -47,38 +46,34 @@ module.exports = {
 			},
 			{
 				test: /\.(jpg|png|gif|jpeg|svg|bmp)$/,
-				use: [
-					{
-						loader: 'file-loader',
-						options: {
-							name: '[name].[ext]',
-							outputPath: 'images/',
-							publicPath: ''
-						}
+				use: [{
+					loader: 'file-loader',
+					options: {
+						name: '[name].[ext]',
+						outputPath: 'images/',
+						publicPath: ''
 					}
-				]
+				}]
 			},
 			{
 				test: /\.(ttf|eot|otf|woff|svg|woff2)$/,
-				use: [
-					{
-						loader: 'file-loader',
-						options: {
-							name: '[name].[ext]',
-							outputPath: 'fonts/',
-							publicPath: ''
-						}
+				use: [{
+					loader: 'file-loader',
+					options: {
+						name: '[name].[ext]',
+						outputPath: 'fonts/',
+						publicPath: ''
 					}
-				]
+				}]
 			}
 		]
 	},
 	plugins: [
 		new webpack.ProvidePlugin({
 			$: 'jquery',
-			jQuery:'jquery',
+			jQuery: 'jquery',
 		}),
 		extractPlugin,
 		new CleanWebpackPlugin(['dist'])
 	]
-}
+};
