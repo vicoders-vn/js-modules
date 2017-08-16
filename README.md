@@ -17,7 +17,6 @@ Vicoders JS Modules support many service like preloader, notify...
 ## If you use Webpack
 ```
 import VC from '../node_modules/vicoders-js-modules/index.js';
-
 ```
 
 ### Notify Service

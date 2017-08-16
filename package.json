@@ -1,7 +1,7 @@
 {
   "name": "vicoders-js-modules",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.2",
+  "description": "A library is created by Vicoders team",
   "main": "index.js",
   "scripts": {
     "build:dev": "webpack-dev-server",
