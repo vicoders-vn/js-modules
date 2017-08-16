@@ -1,3 +1,5 @@
+# Note: The plugin dependencies jquery, fontawesome.
+
 # Installation
 You can install Vicoders JS Modules via NPM:
 ```
