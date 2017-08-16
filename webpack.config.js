@@ -72,6 +72,7 @@ module.exports = {
 		new webpack.ProvidePlugin({
 			$: 'jquery',
 			jQuery: 'jquery',
+			Popper: ['popper.js', 'default']
 		}),
 		extractPlugin,
 		new CleanWebpackPlugin(['dist'])
