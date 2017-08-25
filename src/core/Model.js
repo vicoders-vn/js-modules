@@ -31,54 +31,6 @@ class Model {
 
     }
 
-    getState() {
-        let states = this.states() ? this.states() : [];
-        let st = _.find(states, item => {
-            let flag = true;
-            _.forEach(item.params, (value, key) => {
-                if (this[key] !== value) {
-                    flag = false;
-                }
-            });
-            return flag;
-        });
-        return _.isUndefined(st) ? "" : st.state;
-    }
-
-    isState(state) {
-        let states = this.states();
-        let st = _.filter(states, item => {
-            let flag = true;
-            _.forEach(item.params, (value, key) => {
-                if (this[key] !== value) {
-                    flag = false;
-                }
-            });
-            return flag;
-        });
-        return !_.isUndefined(_.find(st, item => item.state === state));
-    }
-
-    getCreatedAt() {
-        var m = moment.tz(this.timestamps.created_at.date, this.getTimezone());
-        m.tz(AppTimeZone);
-        return m;
-    }
-
-    getUpdatedAt() {
-        var m = moment.tz(this.timestamps.updated_at.date, this.getTimezone());
-        m.tz(AppTimeZone);
-        return m;
-    }
-
-    getTimezoneType() {
-        return this.timestamps.created_at.timezone_type;
-    }
-
-    getTimezone() {
-        return this.timestamps.created_at.timezone === 'UTC' ? 'Etc/UTC' : this.timestamps.created_at.timezone;
-    }
-
     camelCase(string) {
         string = string.toLowerCase();
         string = string.replace(/[^a-z0-9]/g, ' ');
@@ -90,6 +42,54 @@ class Model {
         string = string.replace(/\b./, item => item.toLowerCase());
         return string;
     }
+
+    // getState() {
+    //     let states = this.states() ? this.states() : [];
+    //     let st = _.find(states, item => {
+    //         let flag = true;
+    //         _.forEach(item.params, (value, key) => {
+    //             if (this[key] !== value) {
+    //                 flag = false;
+    //             }
+    //         });
+    //         return flag;
+    //     });
+    //     return _.isUndefined(st) ? "" : st.state;
+    // }
+
+    // isState(state) {
+    //     let states = this.states();
+    //     let st = _.filter(states, item => {
+    //         let flag = true;
+    //         _.forEach(item.params, (value, key) => {
+    //             if (this[key] !== value) {
+    //                 flag = false;
+    //             }
+    //         });
+    //         return flag;
+    //     });
+    //     return !_.isUndefined(_.find(st, item => item.state === state));
+    // }
+
+    // getCreatedAt() {
+    //     var m = moment.tz(this.timestamps.created_at.date, this.getTimezone());
+    //     m.tz(AppTimeZone);
+    //     return m;
+    // }
+
+    // getUpdatedAt() {
+    //     var m = moment.tz(this.timestamps.updated_at.date, this.getTimezone());
+    //     m.tz(AppTimeZone);
+    //     return m;
+    // }
+
+    // getTimezoneType() {
+    //     return this.timestamps.created_at.timezone_type;
+    // }
+
+    // getTimezone() {
+    //     return this.timestamps.created_at.timezone === 'UTC' ? 'Etc/UTC' : this.timestamps.created_at.timezone;
+    // }
 }
 
 module.exports = Model;
