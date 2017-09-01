@@ -3,12 +3,12 @@
 # Installation
 You can install Vicoders JS Modules via NPM:
 ```
-$ npm install vicoders-js-modules
+$ npm install vicoders
 ```
 
 Load css to your application
 ```
-<link rel="stylesheet" type="text/css" href="./node_modules/vicoders-js-modules/dist/app.css">
+<link rel="stylesheet" type="text/css" href="./node_modules/vicoders/dist/app.css">
 ```
 
 Vicoders JS Modules support many service like preloader, notify...
@@ -16,7 +16,7 @@ Vicoders JS Modules support many service like preloader, notify...
 
 ## If you use Webpack
 ```
-import VC from '../node_modules/vicoders-js-modules/index.js';
+import VC from 'vicoders';
 ```
 
 ### Notify Service
@@ -69,8 +69,8 @@ VC.preloader.hide();
 
 In additional, we can use specify service like this.
 ```
-import preloader from '../node_modules/vicoders-js-modules/src/services/preloader/preloader.js';
-import notify from '../node_modules/vicoders-js-modules/src/services/notify/notify.js';
+import preloader from 'vicoders/src/services/preloader/preloader.js';
+import notify from 'vicoders/src/services/notify/notify.js';
 
 preloader.show();
 notify.show('success', 'Successfully!', 5000);
@@ -81,7 +81,7 @@ notify.show('success', 'Successfully!', 5000);
 
 You can add script tag like this
 ```
-<script type="text/javascript" src="./node_modules/vicoders-js-modules/dist/app.js"></script>
+<script type="text/javascript" src="./node_modules/vicoders/dist/app.js"></script>
 ```
 
 and use:
@@ -97,7 +97,7 @@ VC.notify.show('success', 'Successfully!');
 Usage BaseModel like this:
 
 ```
-import Model from '../node_modules/vicoders-js-modules/src/core/Model.js';
+import Model from 'vicoders/src/core/Model.js';
 
 class User extends Model {
 	constructor(options) {
@@ -122,7 +122,7 @@ console.log(user.getAge());
 **Usage:**
 
 ```
-import random_string from '../node_modules/vicoders-js-modules/src/core/common/random_string.js';
+import random_string from 'vicoders/src/core/common/random_string.js';
 
 console.log(random_string(20)); // generate a string with length is 20
 ```
