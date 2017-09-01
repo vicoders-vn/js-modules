@@ -92,4 +92,4 @@ class Model {
     // }
 }
 
-module.exports = Model;
+export { Model };

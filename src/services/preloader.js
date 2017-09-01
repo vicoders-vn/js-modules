@@ -12,4 +12,4 @@ var preloader = {
 	}
 }
 
-export default preloader;
+export { preloader };

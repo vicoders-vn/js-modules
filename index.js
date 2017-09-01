@@ -1,7 +1,7 @@
-import notify from './src/services/notify/notify.js';
-import preloader from './src/services/preloader/preloader.js';
-import Model from './src/core/Model.js';
-import random_string from './src/core/common/random_string.js';
+import { notify } from './src/services/notify';
+import { preloader } from './src/services/preloader';
+import { Model } from './src/core/Model';
+import { random_string } from './src/core/common/random_string';
 
 var VC = {
 	notify: notify,
@@ -10,4 +10,4 @@ var VC = {
 	random_string: random_string
 }
 
-export default VC;
+export { VC };

@@ -57,4 +57,4 @@ var notify = {
 	}
 }
 
-export default notify;
+export { notify };

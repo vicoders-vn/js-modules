@@ -1,4 +1,4 @@
-export default function random_string(str_length) {
+export function random_string(str_length) {
 	var text = "";
 	var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 

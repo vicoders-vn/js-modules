@@ -6,42 +6,39 @@ You can install Vicoders JS Modules via NPM:
 $ npm install vicoders
 ```
 
-Load css to your application
+Load `CSS` to your application
 ```
 <link rel="stylesheet" type="text/css" href="./node_modules/vicoders/dist/app.min.css">
 ```
 
-Vicoders JS Modules support many service like preloader, notify...
 # Usage
-
-## If you use Webpack
 ```
-import VC from 'vicoders';
+import { VC } from 'vicoders';
 ```
 
-### Notify Service
+## Notify
 #### Parameters
 ```
 function (type, content, time, scroll_top, close_callback) { }
 ```
 
 #### type
-String. Default: success.
+(string) (required) - Type of notify.
 
-Type of notify.
+(values) - (success | warning).
 
 #### content 
-String.
-
-Content of notify.
+(string) (required) - Content of notify.
 
 #### time
-Integer. Default: infinite.
+(integer) (optional) (miliseconds) - Time auto hide of notify. 
 
-Time auto hide of notify.
+Default: infinite.
 
 #### scroll_top
-Boolean. Default: false.
+(boolean) (optional).
+
+Default: false.
 
 #### close_callback
 Function
@@ -56,7 +53,7 @@ VC.notify.show('success', 'Successfully!');
 VC.notify.show('warning', 'Warning!', 5000);
 ```
 
-### Preloader Service
+## Preloader
 #### To show preloader
 ```
 VC.preloader.show();
@@ -69,37 +66,23 @@ VC.preloader.hide();
 
 In additional, we can use specify service like this.
 ```
-import preloader from 'vicoders/src/services/preloader/preloader.js';
-import notify from 'vicoders/src/services/notify/notify.js';
+import { preloader } from 'vicoders/services';
+import { notify } from 'vicoders/services';
 
 preloader.show();
 notify.show('success', 'Successfully!', 5000);
-
 ```
 
-## If you don't use Webpack
-
-You can add script tag like this
-```
-<script type="text/javascript" src="./node_modules/vicoders/dist/app.min.js"></script>
-```
-
-and use:
-```
-VC.preloader.show();
-VC.notify.show('success', 'Successfully!');
-```
-
-# BaseModel
+## BaseModel
 
 **Note:** This BaseModel use ES6 so you should use [Babel](https://github.com/babel/babel-loader) to transpiling JavaScript
 
 Usage BaseModel like this:
 
 ```
-import VC from 'vicoders';
+import { Model } from 'vicoders/core';
 
-class User extends VC.Model {
+class User extends Model {
 	constructor(options) {
 		super(options);
         this.bind(options);
@@ -117,12 +100,26 @@ console.log(user.getName());
 console.log(user.getAge());
 ```
 
-# Random string
+## Random string
 
 **Usage:**
 
 ```
-import VC from 'vicoders';
+import { random_string } from 'vicoders/core';
 
-console.log(VC.random_string(20)); // generate a string with length is 20
+console.log(random_string(20)); // generate a string with length is 20
+```
+
+# If you don't use Webpack
+
+You can add script tag like this
+```
+<script type="text/javascript" src="./node_modules/vicoders/dist/app.min.js"></script>
+```
+
+and use all services above like this:
+```
+VC.preloader.show();
+VC.notify.show('success', 'Successfully!');
+VC.random_string(20);
 ```
