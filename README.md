@@ -8,7 +8,7 @@ $ npm install vicoders
 
 Load css to your application
 ```
-<link rel="stylesheet" type="text/css" href="./node_modules/vicoders/dist/app.css">
+<link rel="stylesheet" type="text/css" href="./node_modules/vicoders/dist/app.min.css">
 ```
 
 Vicoders JS Modules support many service like preloader, notify...
@@ -81,7 +81,7 @@ notify.show('success', 'Successfully!', 5000);
 
 You can add script tag like this
 ```
-<script type="text/javascript" src="./node_modules/vicoders/dist/app.js"></script>
+<script type="text/javascript" src="./node_modules/vicoders/dist/app.min.js"></script>
 ```
 
 and use:
@@ -97,9 +97,9 @@ VC.notify.show('success', 'Successfully!');
 Usage BaseModel like this:
 
 ```
-import Model from 'vicoders/src/core/Model.js';
+import VC from 'vicoders';
 
-class User extends Model {
+class User extends VC.Model {
 	constructor(options) {
 		super(options);
         this.bind(options);
@@ -122,7 +122,7 @@ console.log(user.getAge());
 **Usage:**
 
 ```
-import random_string from 'vicoders/src/core/common/random_string.js';
+import VC from 'vicoders';
 
-console.log(random_string(20)); // generate a string with length is 20
+console.log(VC.random_string(20)); // generate a string with length is 20
 ```

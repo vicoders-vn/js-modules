@@ -4,7 +4,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var CleanWebpackPlugin = require('clean-webpack-plugin');
 
 var extractPlugin = new ExtractTextPlugin({
-	filename: 'app.css'
+	filename: 'app.min.css'
 });
 
 module.exports = {
@@ -16,7 +16,7 @@ module.exports = {
 	},
 	output: {
 		path: path.resolve(__dirname, 'dist'),
-		filename: 'app.js',
+		filename: 'app.min.js',
 		publicPath: '/dist'
 	},
 	module: {
