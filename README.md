@@ -92,7 +92,7 @@ VC.notify.show('success', 'Successfully!');
 
 # BaseModel
 
-**Note: ** This BaseModel use ES6 so you should use [Babel](https://github.com/babel/babel-loader) to transpiling JavaScript
+**Note:** This BaseModel use ES6 so you should use [Babel](https://github.com/babel/babel-loader) to transpiling JavaScript
 
 Usage BaseModel like this:
 
