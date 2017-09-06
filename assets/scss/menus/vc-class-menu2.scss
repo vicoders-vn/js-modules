@@ -71,3 +71,14 @@
         }
     }
 }
+
+@media screen and (max-width:1030px) {
+    .vc-class-menu2 {
+        background: #128198;
+        height: 44px;
+
+        .container {
+            display: block;
+        }
+    }
+}
