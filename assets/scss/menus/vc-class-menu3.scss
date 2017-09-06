@@ -1,0 +1,161 @@
+.vc-class-menu3 {
+    position: relative;
+
+    .container {
+        padding: 0;
+        display: -webkit-flex;
+    }
+
+    .main-menu {
+        background: #128198;
+        display: inline-block;
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+
+        >ul {
+
+            >li {
+                float: left;
+
+                .sub-menu {
+                    background: #128198 none repeat scroll 0 0;
+                    left: 0;
+                    display: none;
+                    position: absolute;
+                    top: 100%;
+                    z-index: 2222;
+                    min-width: 150%;
+
+                    .sub-menu {
+                        left: 100%;
+                        top: 0;
+                    }
+                }
+                a {
+                    border-left: 1px solid transparent;
+                    border-right: 1px solid transparent;
+                }
+                > a {
+                    &::before {
+                        background: #99c3cc none repeat scroll 0 0;
+                        content: "";
+                        height: 60%;
+                        position: absolute;
+                        right: -2px;
+                        top: 50%;
+                        width: 1px;
+                        transform: translateY(-50%);
+                        -moz-transform: translateY(-50%);
+                        -webkit-transform: translateY(-50%);
+                        -o-transform: translateY(-50%);
+                        -ms-transform: translateY(-50%);
+                    }
+                }
+            }
+        }
+
+        ul {
+            list-style: outside none none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                position: relative;
+
+                &:hover {
+                    background: #128198-hover;
+
+                    >.sub-menu {
+                        display: block;
+                        visibility: visible;
+                        animation: 0.3s ease 0s normal none 1 running fadeInUp;
+                        -moz-animation: 0.3s ease 0s normal none 1 running fadeInUp;
+                        -webkit-animation: 0.3s ease 0s normal none 1 running fadeInUp;
+                        -o-animation: 0.3s ease 0s normal none 1 running fadeInUp;
+                        -ms-animation: 0.3s ease 0s normal none 1 running fadeInUp;
+                    }
+                }
+
+                &:first-child a::before {
+                    // display: none;
+                }
+                &:last-child a::before {
+                    display: none;
+                }
+
+                a {
+                    color: #ffffff;
+                    display: block;
+                    font-family: roboto_bold;
+                    padding: 10px 8px;
+                    position: relative;
+                    white-space: nowrap;
+                    font-size: 12px;
+                    margin: 0 1px;
+
+                    .fa {
+                        font-size: 18px;
+                        display: inherit;
+                    }
+                }
+            }
+            .current-menu-item {
+                background: #128198-hover;
+            }
+            ul li a {
+                padding: 10px;
+            }
+
+            .current-menu-item > a {
+                font-weight: bold;
+            }
+        }
+    }
+
+    .mean-container {
+        .mean-bar {
+            background: none;
+            left: 0;
+            padding: 0 0 4px;
+            position: absolute;
+            top: 0;
+            z-index: 999;
+            max-width: 370px;
+            .meanmenu-reveal {
+                left: 0 !important;
+                top: 0;
+                padding: 11px 13px;
+            }
+            .mean-nav {
+                background: #128198 none repeat scroll 0 0 !important;
+                margin-top: 44px;
+            }
+        }
+        .mean-nav ul li {
+            a {
+                text-transform: none;
+                padding-bottom: 10px;
+                padding-top: 10px;
+            }
+            .mean-expand {
+                height: 16px;
+                line-height: 16px;
+                &:hover {
+                    background: rgba(255, 255, 255, 0.3) none repeat scroll 0 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1030px) {
+    .vc-class-menu3 {
+        background: #128198;
+        height: 44px;
+
+        .container {
+            display: block;
+        }
+    }
+}

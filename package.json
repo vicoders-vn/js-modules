@@ -1,6 +1,6 @@
 {
   "name": "vicoders",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A library is created by Vicoders team",
   "main": "index.js",
   "scripts": {
