@@ -1,3 +1,5 @@
+@import url('../../src/menu/jquery.meanmenu/meanmenu.min.css');
+
 .vc-class-menu1 {
     background: #02923d none repeat scroll 0 0;
     position: relative;
@@ -165,7 +167,7 @@
 /*RESPONSIVE*/
 
 @media screen and (max-width: 1199px) {
-    .menu1 .main-menu ul {
+    .vc-class-menu1 .main-menu ul {
         li a {
             font-size: 12px;
         }
@@ -176,7 +178,7 @@
 }
 
 @media screen and (max-width: 992px) {
-    .menu1 {
+    .vc-class-menu1 {
         height: 52px;
     }
 }
@@ -184,7 +186,7 @@
 @media screen and (max-width: 767px) {}
 
 @media screen and (max-width: 480px) {
-    .menu1 .mean-container .mean-bar {
+    .vc-class-menu1 .mean-container .mean-bar {
         max-width: 100%;
     }
 }
