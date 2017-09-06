@@ -1,10 +1,4 @@
-jQuery.getScript("./jquery.meanmenu/jquery.meanmenu.min.js")
-	.done(function() {
-		console.log('meanmenu loaded');
-	})
-	.fail(function() {
-		console.log('meanmenu dont load');
-});
+import './jquery.meanmenu/jquery.meanmenu.min.js';
 
 //for menu1
 $(document).ready(function () {
